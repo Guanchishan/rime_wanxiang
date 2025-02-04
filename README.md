@@ -24,8 +24,7 @@
  algebra:
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
     - xform/ń|ň|ǹ/en/ 
-    - xform/\bng\b/en/
-    - xform/ńg|ňg|ǹg/en/
+    - xform/ńg|ňg|ǹg/eng/
 ```
 ##### 末尾数字声调：
 ```
@@ -73,7 +72,7 @@
 ##### 数字跟随元音声调：
 ```
     - xform/ń|ň|ǹ/en/   #先处理一些特殊音节
-    - xform/\bng\b/en/
+    - xform/\bng\b/eng/
     - xform/ńg|ňg|ǹg/en/
 
     - xform/ā/a1 
