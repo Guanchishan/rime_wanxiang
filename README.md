@@ -31,7 +31,6 @@
     - xform/ń/én/ 
     - xform/ň/ěn/ 
     - xform/ǹ/ěn/ 
-    - xform/\bng\b/eng/
     - xform/ńg/éng/
     - xform/ňg/ěng/
     - xform/ṅg/èng/
@@ -71,10 +70,6 @@
 ```
 ##### 数字跟随元音声调：
 ```
-    - xform/ń|ň|ǹ/en/   #先处理一些特殊音节
-    - xform/\bng\b/eng/
-    - xform/ńg|ňg|ǹg/en/
-
     - xform/ā/a1 
     - xform/á/a2 
     - xform/ǎ/a3 
