@@ -16,7 +16,7 @@
 
 效果大赏
 
-![效果.png](https://storage.deepin.org/thread/202502200328333300_效果.png)
+![效果.png](https://storage.deepin.org/thread/202502200358104987_%E6%95%88%E6%9E%9C.png)
 
 ---
 **1. 词库可移植性：**
