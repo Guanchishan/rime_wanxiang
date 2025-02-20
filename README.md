@@ -13,10 +13,9 @@
 
 **由于词库是全局携带声调的，因此这里侧重推荐进阶用户使用：[自然龙](https://github.com/rimeinn/rime-zrlong) 方案，这是一种韵母带声调的双拼输入方式，万象已经内置自然龙运算方案，表头即可配置**
 ---
-
 效果大赏
 
-![效果.png](https://storage.deepin.org/thread/202502200358104987_%E6%95%88%E6%9E%9C.png)
+![效果.png](https://storage.deepin.org/thread/202502200358104987_效果.png)
 
 ---
 **1. 词库可移植性：**
