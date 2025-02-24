@@ -27,13 +27,13 @@ local function modify_preedit_filter(input, env)
         local preedit = genuine_cand.preedit or ""
         local comment = genuine_cand.comment
 
-        --如果 comment 为空，直接跳过，不做任何处理
+        -- 如果 comment 为空，直接跳过，不做任何处理
         if not comment or comment == "" then
             yield(cand)
             goto continue
         end
 
-        if is_tone_display and #preedit >= 2 then
+        if is_tone_display and #preedit >= 1 then
             local input_parts = {}
             local current_segment = ""
 
@@ -69,7 +69,17 @@ local function modify_preedit_filter(input, env)
                 if part ~= auto_delimiter and part ~= manual_delimiter then
                     if pinyin_index <= #pinyin_segments then
                         if i == #input_parts and #part == 1 then
-                            input_parts[i] = part
+                            local first_pinyin = pinyin_segments[pinyin_index]
+                            if first_pinyin and (#first_pinyin >= 2) then
+                                local prefix = first_pinyin:sub(1, 2)
+                                if prefix == "zh" or prefix == "ch" or prefix == "sh" then
+                                    input_parts[i] = prefix
+                                else
+                                    input_parts[i] = part
+                                end
+                            else
+                                input_parts[i] = part
+                            end
                         else
                             input_parts[i] = pinyin_segments[pinyin_index]
                             pinyin_index = pinyin_index + 1
