@@ -27,6 +27,7 @@ schema:
     - wanxiang_radical    # 部件拆字，反查及辅码
     - wanxiang_stroke     #笔画反查
     - wanxiang_charset    #字符集过滤器
+    - wanxiang_tips      #超级提示滤镜
 # 开关
 # reset: 默认状态。注释掉后，切换窗口时不会重置到默认状态。
 # states: 方案选单显示的名称。可以注释掉，仍可以通过快捷键切换。
@@ -399,7 +400,6 @@ speller:
     - xform/^ng$/eng/
     - xform/ńg|ňg|ǹg/eng/
     - xform/ń|ň|ǹ/en/
-    - abbrev/^([zcs]h).+$/$1/
     - abbrev/^([a-z]).+$/$1/
 自然码: 
   __append:
@@ -436,7 +436,7 @@ speller:
     - xform/(.)ou$/$1Ⓑ/
     - xform/in$/Ⓝ/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
-   # - abbrev/^([a-z]).+$/$1/   #简拼
+    - abbrev/^([a-z]).+$/$1/   #简拼
 
 自然龙:      #原作者项目地址： https://github.com/rimeinn/rime-zrlong
   __append:
@@ -536,7 +536,7 @@ speller:
     - xform/ui$/Ⓥ/
     - xform/in$/Ⓑ/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
-   # - abbrev/^([a-z]).+$/$1/   #简拼
+    - abbrev/^([a-z]).+$/$1/   #简拼
 搜狗双拼: 
   __append:
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
@@ -573,7 +573,7 @@ speller:
     - xform/in$/Ⓝ/
     - xform/ing$/;/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
-   # - abbrev/^([a-z]).+$/$1/   #简拼
+    - abbrev/^([a-z]).+$/$1/   #简拼
 微软双拼: 
   __append:
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
@@ -611,7 +611,7 @@ speller:
     - xform/in$/Ⓝ/
     - xform/ing$/;/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
-   # - abbrev/^([a-z]).+$/$1/   #简拼
+    - abbrev/^([a-z]).+$/$1/   #简拼
 智能ABC:
   __append:
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
@@ -784,7 +784,7 @@ speller:
 
 user_dict_set:
   dictionary: wanxiang
-  initial_quality: 0
+  initial_quality: 5
   enable_completion: false
   enable_sentence: false
   spelling_hints: 100
