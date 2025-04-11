@@ -69,16 +69,15 @@ engine:
   processors:
     - predictor                                 #联想处理器
     - chord_composer                            #并击处理器
-    - lua_processor@*select_character          # 以词定字
+    - lua_processor@*select_character           # 以词定字
     - lua_processor@*cold_word_drop.processor
-    - lua_processor@*quick_symbol_text    #快符引导以及重复上屏
-    - lua_processor@*super_tips           #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
-    #- lua_processor@*super_tips_phone*S   #超级提示模块：手机上启用这个，连同lua_filter还有一处
-    - lua_processor@*userdb_sync_delete   #通过输入 /del 触发,用于清理自定义同步目录下txt用户词典里被标记c<0的词条
+    - lua_processor@*quick_symbol_text          #快符引导以及重复上屏
+    - lua_processor@*super_tips*S               #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
+    - lua_processor@*userdb_sync_delete         #通过输入 /del 触发,用于清理自定义同步目录下txt用户词典里被标记c<0的词条
     - ascii_composer
     - recognizer
     - key_binder
-    - lua_processor@*key_binder # 绑定按键扩展能力
+    - lua_processor@*key_binder  # 绑定按键扩展能力
     - speller
     - punctuator
     - selector
@@ -101,12 +100,12 @@ engine:
     - lua_translator@*unicode            # Unicode
     - lua_translator@*number_translator  # 数字、金额大写
     - lua_translator@*super_calculator   # 计算器
-    - table_translator@custom_phrase    # 自定义短语 custom_phrase.txt
-    - table_translator@wanxiang_en         # 英文输入
-    - table_translator@cn_en            # 中英混合词汇
-    - table_translator@chengyu          # 简码成语
-    - table_translator@radical_lookup   # 部件拆字反查
-    - table_translator@reverse_stroke   #笔画反查
+    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
+    - table_translator@wanxiang_en       # 英文输入
+    - table_translator@cn_en             # 中英混合词汇
+    - table_translator@chengyu           # 简码成语
+    - table_translator@radical_lookup    # 部件拆字反查
+    - table_translator@reverse_stroke    #笔画反查
     - script_translator@user_dict_set
     - script_translator@add_user_dict
     - lua_translator@*force_gc          # 暴力 GC 降低内存
@@ -120,7 +119,7 @@ engine:
     - simplifier@traditionalize                     # 简繁切换
     - simplifier@chinese_english                    #中英翻译
     - lua_filter@*search@wanxiang_radical           # 部件拆字辅码放在简繁转换之后
-    #- lua_filter@*super_tips_phone*M              #超级提示模块：手机上启用这个，连同lua_processor还有一处
+    - lua_filter@*super_tips*M                      #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
     - lua_filter@*super_comment                     #超级注释模块，支持错词提示、辅助码显示，部件组字读音注释，支持个性化配置和关闭相应的功能，详情搜索super_comment进行详细配置
     - uniquifier                                    # 去重
 
