@@ -12,7 +12,7 @@ end
 local os_detection_patterns = {
     windows = { "weasel", "Weasel" },    -- Windows 的标识符列表
     linux = { "fcitx%-rime" },           -- Linux 的标识符
-    macos = { "squirrel" },              -- macOS 的标识符
+    macos = { "squirrel", "Squirrel"},   -- macOS 的标识符
     android = { "trime" }                -- android 的标识符
 }
 
