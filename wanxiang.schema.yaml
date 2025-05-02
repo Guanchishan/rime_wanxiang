@@ -692,13 +692,13 @@ speller:
     - xform/(.)en(\d)$/$1Ⓕ$2/
     - xform/(.)eng(\d)$/$1Ⓖ$2/
     - xform/[iu]ang(\d)$/Ⓛ$1/
-    - xform/(.)ang(\d)$/$1Ⓗ$1/
+    - xform/(.)ang(\d)$/$1Ⓗ$2/
     - xform/ian(\d)$/Ⓜ$1/
     - xform/(.)an(\d)$/$1Ⓙ$2/
     - xform/(.)ou(\d)$/$1Ⓩ$2/
     - xform/[iu]a(\d)$/Ⓧ$1/
     - xform/iao(\d)$/Ⓝ$1/
-    - xform/(.)ao(\d)$/$1Ⓒ$1/
+    - xform/(.)ao(\d)$/$1Ⓒ$2/
     - xform/ui(\d)$/Ⓥ$1/
     - xform/in(\d)$/Ⓑ$1/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
