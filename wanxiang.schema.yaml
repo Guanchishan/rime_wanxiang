@@ -438,7 +438,7 @@ speller:
     - xform/^(.*)ň(.*)$/$1n$2③/
     - xform/^(.*)ǹ(.*)$/$1n$2④/
     - xlit/①②③④/7890
-    - xform/^ng(\d)$/eng$1/
+    - derive/^ng(\d)$/eng$1/
     - xform/^n(\d)/en$2/
     - derive/(.+)(\d)/$1/
     - derive/([nl])ve(\d)/$1ue$2/                            #让üè兼容ue
@@ -516,7 +516,7 @@ speller:
     - xform/^(.*)ň(.*)$/$1n$2③/
     - xform/^(.*)ǹ(.*)$/$1n$2④/
     - xlit/①②③④/7890
-    - xform/^ng(\d)$/eng$1/
+    - derive/^ng(\d)$/eng$1/
     - xform/^n(\d)/en$2/
     - derive/^([jqxy])u(\d)$/$1v$2/
     - derive/^([aoe])([ioun])(\d)$/$1$1$2$3/
@@ -682,7 +682,7 @@ speller:
     - xform/^(.*)ň(.*)$/$1n$2③/
     - xform/^(.*)ǹ(.*)$/$1n$2④/
     - xlit/①②③④/7890
-    - xform/^ng(\d)$/eng$1/
+    - derive/^ng(\d)$/eng$1/
     - xform/^n(\d)/en$2/
     - derive/^([jqxy])u(\d)$/$1v$2/
     - derive/^([aoe])([ioun])(\d)$/$1$1$2$3/
