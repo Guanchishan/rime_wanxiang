@@ -434,10 +434,12 @@ speller:
     - xform/^(.*)ǚ(.*)$/$1v$2③/
     - xform/^(.*)ǜ(.*)$/$1v$2④/
     - xform/^(.*)ü(.*)$/$1v$2①/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
     - xlit/①②③④/7890
-    - derive/^ng$/eng/
-    - derive/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
+    - xform/^ng(\d)$/eng$1/
+    - xform/^n(\d)/en$2/
     - derive/(.+)(\d)/$1/
     - derive/([nl])ve(\d)/$1ue$2/                            #让üè兼容ue
     - derive/^([jqx])v(\d)$/$1u$2/
@@ -510,8 +512,12 @@ speller:
     - xform/^(.*)ǚ(.*)$/$1v$2③/
     - xform/^(.*)ǜ(.*)$/$1v$2④/
     - xform/^(.*)ü(.*)$/$1v$2①/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
     - xlit/①②③④/7890
     - xform/^ng(\d)$/eng$1/
+    - xform/^n(\d)/en$2/
     - derive/^([jqxy])u(\d)$/$1v$2/
     - derive/^([aoe])([ioun])(\d)$/$1$1$2$3/
     - xform/^([aoe])(ng)?(\d)$/$1$1$2$3/
@@ -672,10 +678,12 @@ speller:
     - xform/^(.*)ǚ(.*)$/$1v$2③/
     - xform/^(.*)ǜ(.*)$/$1v$2④/
     - xform/^(.*)ü(.*)$/$1v$2①/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
     - xlit/①②③④/7890
     - xform/^ng(\d)$/eng$1/
-    - xform/(ńg|ňg|ǹg)(\d)/eng$2/
-    - xform/(ń|ň|ǹ)(\d)/en$2/
+    - xform/^n(\d)/en$2/
     - derive/^([jqxy])u(\d)$/$1v$2/
     - derive/^([aoe])([ioun])(\d)$/$1$1$2$3/
     - xform/^([aoe])(ng)?(\d)$/$1$1$2$3/
@@ -692,8 +700,8 @@ speller:
     - xform/(.)i?ong(\d)$/$1Ⓢ$2/
     - xform/ing|uai(\d)$/Ⓚ$1/
     - xform/(.)ai(\d)$/$1Ⓓ$2/
-    - xform/(.)en(\d)$/$1Ⓕ$2/
     - xform/(.)eng(\d)$/$1Ⓖ$2/
+    - xform/(.)en(\d)$/$1Ⓕ$2/
     - xform/[iu]ang(\d)$/Ⓛ$1/
     - xform/(.)ang(\d)$/$1Ⓗ$2/
     - xform/ian(\d)$/Ⓜ$1/
