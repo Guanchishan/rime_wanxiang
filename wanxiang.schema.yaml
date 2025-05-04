@@ -399,8 +399,8 @@ speller:
 全拼(备份): 
   __append:
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/en/
-    - xform/ńg|ňg|ǹg/en/
+    - derive/^ng$/eng/
+    - derive/ńg|ňg|ǹg/eng/
     - xform/ń|ň|ǹ/en/
     - derive/([nl])ve/$1ue/                            #让üè兼容ue
     - derive/^([jqx])v$/$1u/
@@ -435,6 +435,9 @@ speller:
     - xform/^(.*)ǜ(.*)$/$1v$2④/
     - xform/^(.*)ü(.*)$/$1v$2①/
     - xlit/①②③④/7890
+    - derive/^ng$/eng/
+    - derive/ńg|ňg|ǹg/eng/
+    - xform/ń|ň|ǹ/en/
     - derive/(.+)(\d)/$1/
     - derive/([nl])ve(\d)/$1ue$2/                            #让üè兼容ue
     - derive/^([jqx])v(\d)$/$1u$2/
