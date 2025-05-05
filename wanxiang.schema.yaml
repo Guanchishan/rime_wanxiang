@@ -433,7 +433,7 @@ speller:
     - xform/^(.*)ǘ(.*)$/$1v$2②/
     - xform/^(.*)ǚ(.*)$/$1v$2③/
     - xform/^(.*)ǜ(.*)$/$1v$2④/
-    - xform/^(.*)ü(.*)$/$1v$2①/
+    - xform/^(.*)ü(.*)$/$1v$2/
     - xform/^(.*)ń(.*)$/$1n$2②/
     - xform/^(.*)ň(.*)$/$1n$2③/
     - xform/^(.*)ǹ(.*)$/$1n$2④/
@@ -511,11 +511,11 @@ speller:
     - xform/^(.*)ǘ(.*)$/$1v$2②/
     - xform/^(.*)ǚ(.*)$/$1v$2③/
     - xform/^(.*)ǜ(.*)$/$1v$2④/
-    - xform/^(.*)ü(.*)$/$1v$2①/
+    - xform/^(.*)ü(.*)$/$1v$2/
     - xform/^(.*)ń(.*)$/$1n$2②/
     - xform/^(.*)ň(.*)$/$1n$2③/
     - xform/^(.*)ǹ(.*)$/$1n$2④/
-    - xlit/①②③④/7890
+    - xlit/①②③④/7890/
     - derive/^ng(\d)$/eng$1/
     - xform/^n(\d)/en$2/
     - derive/^([jqxy])u(\d)$/$1v$2/
@@ -677,11 +677,11 @@ speller:
     - xform/^(.*)ǘ(.*)$/$1v$2②/
     - xform/^(.*)ǚ(.*)$/$1v$2③/
     - xform/^(.*)ǜ(.*)$/$1v$2④/
-    - xform/^(.*)ü(.*)$/$1v$2①/
+    - xform/^(.*)ü(.*)$/$1v$2/
     - xform/^(.*)ń(.*)$/$1n$2②/
     - xform/^(.*)ň(.*)$/$1n$2③/
     - xform/^(.*)ǹ(.*)$/$1n$2④/
-    - xlit/①②③④/7890
+    - xlit/①②③④/7890/
     - derive/^ng(\d)$/eng$1/
     - xform/^n(\d)/en$2/
     - derive/^([jqxy])u(\d)$/$1v$2/
@@ -717,146 +717,260 @@ speller:
     #- abbrev/^([a-z]).+$/$1/   #简拼
 搜狗双拼: 
   __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/eng/
-    - xform/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - derive/^([jqxy])u$/$1v/
-    - derive/^([aoe].*)$/o$1/
-    - xform/^([ae])(.*)$/$1$1$2/
-    - xform/iu$/Ⓠ/
-    - xform/[iu]a$/Ⓦ/
-    - xform/er$|[uv]an$/Ⓡ/
-    - xform/[uv]e$/Ⓣ/
-    - xform/v$|uai$/Ⓨ/
+    - xform/^([a-z]+)$/$1④/
+    - xform/^(.*)ā(.*)$/$1a$2①/
+    - xform/^(.*)á(.*)$/$1a$2②/
+    - xform/^(.*)ǎ(.*)$/$1a$2③/
+    - xform/^(.*)à(.*)$/$1a$2④/
+    - xform/^(.*)ō(.*)$/$1o$2①/
+    - xform/^(.*)ó(.*)$/$1o$2②/
+    - xform/^(.*)ǒ(.*)$/$1o$2③/
+    - xform/^(.*)ò(.*)$/$1o$2④/
+    - xform/^(.*)ē(.*)$/$1e$2①/
+    - xform/^(.*)é(.*)$/$1e$2②/
+    - xform/^(.*)ě(.*)$/$1e$2③/
+    - xform/^(.*)è(.*)$/$1e$2④/
+    - xform/^(.*)ī(.*)$/$1i$2①/
+    - xform/^(.*)í(.*)$/$1i$2②/
+    - xform/^(.*)ǐ(.*)$/$1i$2③/
+    - xform/^(.*)ì(.*)$/$1i$2④/
+    - xform/^(.*)ū(.*)$/$1u$2①/
+    - xform/^(.*)ú(.*)$/$1u$2②/
+    - xform/^(.*)ǔ(.*)$/$1u$2③/
+    - xform/^(.*)ù(.*)$/$1u$2④/
+    - xform/^(.*)ǖ(.*)$/$1v$2①/
+    - xform/^(.*)ǘ(.*)$/$1v$2②/
+    - xform/^(.*)ǚ(.*)$/$1v$2③/
+    - xform/^(.*)ǜ(.*)$/$1v$2④/
+    - xform/^(.*)ü(.*)$/$1v$2/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
+    - xlit/①②③④/7890/
+    - derive/^ng(\d)$/eng$1/
+    - xform/^n(\d)/en$2/
+    - derive/^([jqxy])u(\d)$/$1v$2/
+    - derive/^([aoe].*)(\d)$/o$1$2/
+    - xform/^([ae])(.*)(\d)$/$1$1$2$3/
+    - xform/iu(\d)$/Ⓠ$1/
+    - xform/[iu]a(\d)$/Ⓦ$1/
+    - xform/er|[uv]an(\d)$/Ⓡ$1/
+    - xform/[uv]e(\d)$/Ⓣ$1/
+    - xform/v|uai(\d)$/Ⓨ$1/
     - xform/^sh/Ⓤ/
     - xform/^ch/Ⓘ/
     - xform/^zh/Ⓥ/
-    - xform/uo$/Ⓞ/
-    - xform/[uv]n$/Ⓟ/
-    - xform/(.)i?ong$/$1Ⓢ/
-    - xform/[iu]ang$/Ⓓ/
-    - xform/(.)en$/$1Ⓕ/
-    - xform/(.)eng$/$1Ⓖ/
-    - xform/(.)ang$/$1Ⓗ/
-    - xform/ian$/Ⓜ/
-    - xform/(.)an$/$1Ⓙ/
-    - xform/iao$/Ⓒ/
-    - xform/(.)ao$/$1Ⓚ/
-    - xform/(.)ai$/$1Ⓛ/
-    - xform/(.)ei$/$1Ⓩ/
-    - xform/ie$/Ⓧ/
-    - xform/ui$/Ⓥ/
-    - xform/(.)ou$/$1Ⓑ/
-    - xform/in$/Ⓝ/
-    - xform/ing$/;/
+    - xform/uo(\d)$/Ⓞ$1/
+    - xform/[uv]n(\d)$/Ⓟ$1/
+    - xform/(.)i?ong(\d)$/$1Ⓢ$2/
+    - xform/[iu]ang(\d)$/Ⓓ$1/
+    - xform/(.)en(\d)$/$1Ⓕ$2/
+    - xform/(.)eng(\d)$/$1Ⓖ$2/
+    - xform/(.)ang(\d)$/$1Ⓗ$2/
+    - xform/ian(\d)$/Ⓜ$1/
+    - xform/(.)an(\d)$/$1Ⓙ$2/
+    - xform/iao(\d)$/Ⓒ$1/
+    - xform/(.)ao(\d)$/$1Ⓚ$2/
+    - xform/(.)ai(\d)$/$1Ⓛ$2/
+    - xform/(.)ei(\d)$/$1Ⓩ$2/
+    - xform/ie(\d)$/Ⓧ$1/
+    - xform/ui(\d)$/Ⓥ$1/
+    - xform/(.)ou(\d)$/$1Ⓑ$2/
+    - xform/in(\d)$/Ⓝ$1/
+    - xform/ing(\d)$/;$1/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+    - derive/^(..)(\d)$/$1/
     #- abbrev/^([a-z]).+$/$1/   #简拼
 微软双拼: 
   __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/eng/
-    - xform/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - derive/^([jqxy])u$/$1v/
-    - derive/^([aoe].*)$/o$1/
-    - xform/^([ae])(.*)$/$1$1$2/
-    - xform/iu$/Ⓠ/
-    - xform/[iu]a$/Ⓦ/
-    - xform/er$|[uv]an$/Ⓡ/
-    - xform/[uv]e$/Ⓣ/
-    - xform/v$|uai$/Ⓨ/
+    - xform/^([a-z]+)$/$1④/
+    - xform/^(.*)ā(.*)$/$1a$2①/
+    - xform/^(.*)á(.*)$/$1a$2②/
+    - xform/^(.*)ǎ(.*)$/$1a$2③/
+    - xform/^(.*)à(.*)$/$1a$2④/
+    - xform/^(.*)ō(.*)$/$1o$2①/
+    - xform/^(.*)ó(.*)$/$1o$2②/
+    - xform/^(.*)ǒ(.*)$/$1o$2③/
+    - xform/^(.*)ò(.*)$/$1o$2④/
+    - xform/^(.*)ē(.*)$/$1e$2①/
+    - xform/^(.*)é(.*)$/$1e$2②/
+    - xform/^(.*)ě(.*)$/$1e$2③/
+    - xform/^(.*)è(.*)$/$1e$2④/
+    - xform/^(.*)ī(.*)$/$1i$2①/
+    - xform/^(.*)í(.*)$/$1i$2②/
+    - xform/^(.*)ǐ(.*)$/$1i$2③/
+    - xform/^(.*)ì(.*)$/$1i$2④/
+    - xform/^(.*)ū(.*)$/$1u$2①/
+    - xform/^(.*)ú(.*)$/$1u$2②/
+    - xform/^(.*)ǔ(.*)$/$1u$2③/
+    - xform/^(.*)ù(.*)$/$1u$2④/
+    - xform/^(.*)ǖ(.*)$/$1v$2①/
+    - xform/^(.*)ǘ(.*)$/$1v$2②/
+    - xform/^(.*)ǚ(.*)$/$1v$2③/
+    - xform/^(.*)ǜ(.*)$/$1v$2④/
+    - xform/^(.*)ü(.*)$/$1v$2/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
+    - xlit/①②③④/7890/
+    - derive/^ng(\d)$/eng$1/
+    - xform/^n(\d)/en$2/
+    - derive/^([jqxy])u(\d)$/$1v$2/
+    - derive/^([aoe].*)(\d)$/o$1$2/
+    - xform/^([ae])(.*)(\d)$/$1$1$2$3/
+    - xform/iu(\d)$/Ⓠ$1/
+    - xform/[iu]a(\d)$/Ⓦ$1/
+    - xform/er|[uv]an(\d)$/Ⓡ$1/
+    - xform/[uv]e(\d)$/Ⓣ$1/
+    - xform/v|uai(\d)$/Ⓨ$1/
     - xform/^sh/Ⓤ/
     - xform/^ch/Ⓘ/
     - xform/^zh/Ⓥ/
-    - xform/uo$/Ⓞ/
-    - xform/[uv]n$/Ⓟ/
-    - xform/(.)i?ong$/$1Ⓢ/
-    - xform/[iu]ang$/Ⓓ/
-    - xform/(.)en$/$1Ⓕ/
-    - xform/(.)eng$/$1Ⓖ/
-    - xform/(.)ang$/$1Ⓗ/
-    - xform/ian$/Ⓜ/
-    - xform/(.)an$/$1Ⓙ/
-    - xform/iao$/Ⓒ/
-    - xform/(.)ao$/$1Ⓚ/
-    - xform/(.)ai$/$1Ⓛ/
-    - xform/(.)ei$/$1Ⓩ/
-    - xform/ie$/Ⓧ/
-    - xform/ui$/Ⓥ/
-    - derive/Ⓣ$/Ⓥ/
-    - xform/(.)ou$/$1Ⓑ/
-    - xform/in$/Ⓝ/
-    - xform/ing$/;/
+    - xform/uo(\d)$/Ⓞ$1/
+    - xform/[uv]n(\d)$/Ⓟ$1/
+    - xform/(.)i?ong(\d)$/$1Ⓢ$2/
+    - xform/[iu]ang(\d)$/Ⓓ$1/
+    - xform/(.)en(\d)$/$1Ⓕ$2/
+    - xform/(.)eng(\d)$/$1Ⓖ$2/
+    - xform/(.)ang(\d)$/$1Ⓗ$2/
+    - xform/ian(\d)$/Ⓜ$1/
+    - xform/(.)an(\d)$/$1Ⓙ$2/
+    - xform/iao(\d)$/Ⓒ$1/
+    - xform/(.)ao(\d)$/$1Ⓚ$2/
+    - xform/(.)ai(\d)$/$1Ⓛ$2/
+    - xform/(.)ei(\d)$/$1Ⓩ$2/
+    - xform/ie(\d)$/Ⓧ$1/
+    - xform/ui(\d)$/Ⓥ$1/
+    - derive/Ⓣ(\d)$/Ⓥ$1/
+    - xform/(.)ou(\d)$/$1Ⓑ$2/
+    - xform/in(\d)$/Ⓝ$1/
+    - xform/ing(\d)$/;$1/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+    - derive/^(..)(\d)$/$1/
     #- abbrev/^([a-z]).+$/$1/   #简拼
 智能ABC:
   __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/eng/
-    - xform/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - erase/^xx$/
+    - xform/^([a-z]+)$/$1④/
+    - xform/^(.*)ā(.*)$/$1a$2①/
+    - xform/^(.*)á(.*)$/$1a$2②/
+    - xform/^(.*)ǎ(.*)$/$1a$2③/
+    - xform/^(.*)à(.*)$/$1a$2④/
+    - xform/^(.*)ō(.*)$/$1o$2①/
+    - xform/^(.*)ó(.*)$/$1o$2②/
+    - xform/^(.*)ǒ(.*)$/$1o$2③/
+    - xform/^(.*)ò(.*)$/$1o$2④/
+    - xform/^(.*)ē(.*)$/$1e$2①/
+    - xform/^(.*)é(.*)$/$1e$2②/
+    - xform/^(.*)ě(.*)$/$1e$2③/
+    - xform/^(.*)è(.*)$/$1e$2④/
+    - xform/^(.*)ī(.*)$/$1i$2①/
+    - xform/^(.*)í(.*)$/$1i$2②/
+    - xform/^(.*)ǐ(.*)$/$1i$2③/
+    - xform/^(.*)ì(.*)$/$1i$2④/
+    - xform/^(.*)ū(.*)$/$1u$2①/
+    - xform/^(.*)ú(.*)$/$1u$2②/
+    - xform/^(.*)ǔ(.*)$/$1u$2③/
+    - xform/^(.*)ù(.*)$/$1u$2④/
+    - xform/^(.*)ǖ(.*)$/$1v$2①/
+    - xform/^(.*)ǘ(.*)$/$1v$2②/
+    - xform/^(.*)ǚ(.*)$/$1v$2③/
+    - xform/^(.*)ǜ(.*)$/$1v$2④/
+    - xform/^(.*)ü(.*)$/$1v$2/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
+    - xlit/①②③④/7890/
+    - derive/^ng(\d)$/eng$1/
+    - xform/^n(\d)/en$2/
     - xform/^zh/Ⓐ/
     - xform/^ch/Ⓔ/
     - xform/^sh/Ⓥ/
-    - xform/^([aoe].*)$/Ⓞ$1/
-    - xform/ei$/Ⓠ/
-    - xform/ian$/Ⓦ/
-    - xform/er$|iu$/Ⓡ/
-    - xform/[iu]ang$/Ⓣ/
-    - xform/ing$/Ⓨ/
-    - xform/uo$/Ⓞ/
-    - xform/uan$/Ⓟ/
-    - xform/(.)i?ong$/$1Ⓢ/
-    - xform/[iu]a$/Ⓓ/
-    - xform/en$/Ⓕ/
-    - xform/eng$/Ⓖ/
-    - xform/ang$/Ⓗ/
-    - xform/an$/Ⓙ/
-    - xform/iao$/Ⓩ/
-    - xform/ao$/Ⓚ/
-    - xform/in$|uai$/Ⓒ/
-    - xform/ai$/Ⓛ/
-    - xform/ie$/Ⓧ/
-    - xform/ou$/Ⓑ/
-    - xform/un$/Ⓝ/
-    - xform/[uv]e$|ui$/Ⓜ/
-    #- xlit/ⓆⓌⒺⓇⓉⓎⓄⓅⒶⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwertyopasdfghjklzxcvbnm/
+    - xform/^([aoe].*)(\d)$/Ⓞ$1$2/
+    - xform/ei(\d)$/Ⓠ$1/
+    - xform/ian(\d)$/Ⓦ$1/
+    - xform/er|iu(\d)$/Ⓡ$1/
+    - xform/[iu]ang(\d)$/Ⓣ$1/
+    - xform/ing(\d)$/Ⓨ$1/
+    - xform/uo(\d)$/Ⓞ$1/
+    - xform/uan(\d)$/Ⓟ$1/
+    - xform/(.)i?ong(\d)$/$1Ⓢ$2/
+    - xform/[iu]a(\d)$/Ⓓ$1/
+    - xform/en(\d)$/Ⓕ$1/
+    - xform/eng(\d)$/Ⓖ$1/
+    - xform/ang(\d)$/Ⓗ$1/
+    - xform/an(\d)$/Ⓙ$1/
+    - xform/iao(\d)$/Ⓩ$1/
+    - xform/ao(\d)$/Ⓚ$1/
+    - xform/in|uai(\d)$/Ⓒ$1/
+    - xform/ai(\d)$/Ⓛ$1/
+    - xform/ie(\d)$/Ⓧ$1/
+    - xform/ou(\d)$/Ⓑ$1/
+    - xform/un(\d)$/Ⓝ$1/
+    - xform/[uv]e|ui(\d)$/Ⓜ$1/
+    - xlit/ⓆⓌⒺⓇⓉⓎⓄⓅⒶⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwertyopasdfghjklzxcvbnm/
+    - derive/^(..)(\d)$/$1/
 紫光双拼:
   __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/eng/
-    - xform/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - erase/^xx$/
-    - derive/^([jqxy])u$/$1v/
-    - xform/^([aoe].*)$/Ⓞ$1/
-    - xform/en$/Ⓦ/
-    - xform/eng$/Ⓣ/
-    - xform/in$|uai$/Ⓨ/
+    - xform/^([a-z]+)$/$1④/
+    - xform/^(.*)ā(.*)$/$1a$2①/
+    - xform/^(.*)á(.*)$/$1a$2②/
+    - xform/^(.*)ǎ(.*)$/$1a$2③/
+    - xform/^(.*)à(.*)$/$1a$2④/
+    - xform/^(.*)ō(.*)$/$1o$2①/
+    - xform/^(.*)ó(.*)$/$1o$2②/
+    - xform/^(.*)ǒ(.*)$/$1o$2③/
+    - xform/^(.*)ò(.*)$/$1o$2④/
+    - xform/^(.*)ē(.*)$/$1e$2①/
+    - xform/^(.*)é(.*)$/$1e$2②/
+    - xform/^(.*)ě(.*)$/$1e$2③/
+    - xform/^(.*)è(.*)$/$1e$2④/
+    - xform/^(.*)ī(.*)$/$1i$2①/
+    - xform/^(.*)í(.*)$/$1i$2②/
+    - xform/^(.*)ǐ(.*)$/$1i$2③/
+    - xform/^(.*)ì(.*)$/$1i$2④/
+    - xform/^(.*)ū(.*)$/$1u$2①/
+    - xform/^(.*)ú(.*)$/$1u$2②/
+    - xform/^(.*)ǔ(.*)$/$1u$2③/
+    - xform/^(.*)ù(.*)$/$1u$2④/
+    - xform/^(.*)ǖ(.*)$/$1v$2①/
+    - xform/^(.*)ǘ(.*)$/$1v$2②/
+    - xform/^(.*)ǚ(.*)$/$1v$2③/
+    - xform/^(.*)ǜ(.*)$/$1v$2④/
+    - xform/^(.*)ü(.*)$/$1v$2/
+    - xform/^(.*)ń(.*)$/$1n$2②/
+    - xform/^(.*)ň(.*)$/$1n$2③/
+    - xform/^(.*)ǹ(.*)$/$1n$2④/
+    - xlit/①②③④/7890/
+    - derive/^ng(\d)$/eng$1/
+    - xform/^n(\d)/en$2/
+    - derive/^([jqxy])u(\d)$/$1v$2/
+    - xform/^([aoe].*)(\d)$/Ⓞ$1$2/
+    - xform/en(\d)$/Ⓦ$1/
+    - xform/eng(\d)$/Ⓣ$1/
+    - xform/in|uai(\d)$/Ⓨ$1/
     - xform/^zh/Ⓤ/
     - xform/^sh/Ⓘ/
-    - xform/uo$/Ⓞ/
-    - xform/ai$/Ⓟ/
+    - xform/uo(\d)$/Ⓞ$1/
+    - xform/ai(\d)$/Ⓟ$1/
     - xform/^ch/Ⓐ/
-    - xform/[iu]ang$/Ⓖ/
-    - xform/ang$/Ⓢ/
-    - xform/ie$/Ⓓ/
-    - xform/ian$/Ⓕ/
-    - xform/(.)i?ong$/$1Ⓗ/
-    - xform/er$|iu$/Ⓙ/
-    - xform/ei$/Ⓚ/
-    - xform/uan$/Ⓛ/
-    - xform/ing$/;/
-    - xform/ou$/Ⓩ/
-    - xform/[iu]a$/Ⓧ/
-    - xform/iao$/Ⓑ/
-    - xform/ue$|ui$|ve$/Ⓝ/
-    - xform/un$/Ⓜ/
-    - xform/ao$/Ⓠ/
-    - xform/an$/Ⓡ/
-    #- xlit/ⓌⓉⓎⓊⒾⓄⓅⒶⒼⓈⒹⒻⒽⒿⓀⓁⓏⓍⒷⓃⓂⓆⓇ/wtyuiopagsdfhjklzxbnmqr/
+    - xform/[iu]ang(\d)$/Ⓖ$1/
+    - xform/ang(\d)$/Ⓢ$1/
+    - xform/ie(\d)$/Ⓓ$1/
+    - xform/ian(\d)$/Ⓕ$1/
+    - xform/(.)i?ong(\d)$/$1Ⓗ$2/
+    - xform/er|iu$/Ⓙ$1/
+    - xform/ei(\d)$/Ⓚ$1/
+    - xform/uan(\d)$/Ⓛ$1/
+    - xform/ing(\d)$/;$1/
+    - xform/ou(\d)$/Ⓩ$1/
+    - xform/[iu]a(\d)$/Ⓧ$1/
+    - xform/iao(\d)$/Ⓑ$1/
+    - xform/ue|ui|ve(\d)$/Ⓝ$1/
+    - xform/un(\d)$/Ⓜ$1/
+    - xform/ao(\d)$/Ⓠ$1/
+    - xform/an(\d)$/Ⓡ$1/
+    - xlit/ⓌⓉⓎⓊⒾⓄⓅⒶⒼⓈⒹⒻⒽⒿⓀⓁⓏⓍⒷⓃⓂⓆⓇ/wtyuiopagsdfhjklzxbnmqr/
+    - derive/^(..)(\d)$/$1/
 
 乱序17:  
   __append:
