@@ -396,16 +396,6 @@ speller:
       - set_gongjian_mohu    #共键输入或者模糊音选择性开启
 
 
-全拼(备份): 
-  __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - derive/^ng$/eng/
-    - derive/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - derive/([nl])ve/$1ue/                            #让üè兼容ue
-    - derive/^([jqx])v$/$1u/
-    - abbrev/^([qwrtypsdfghjklzxcbnm]).+$/$1/  #不携带元音的声母派生出首字母简码来
-    - abbrev/^([aoe])([ioun])$/$1/             #携带两个字符的元音首字母派生出简码来
 全拼: 
   __append:
     - xform/^([a-z]+)$/$1④/
@@ -447,42 +437,6 @@ speller:
     - abbrev/^([qwrtypsdfghjklzxcbnm]).+(\d)$/$1$2/  #不携带元音的声母派生出首字母简码来+数字声调
     - abbrev/^([aoe])([ioun])(\d)$/$1/             #携带两个字符的元音首字母派生出简码来
     - abbrev/^([aoe])([ioun])(\d)$/$1$3/       #携带两个字符的元音首字母派生出简码来+数字声调
-自然码(备份): 
-  __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/eng/
-    - xform/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - derive/^([jqxy])u$/$1v/
-    - derive/^([aoe])([ioun])$/$1$1$2/
-    - xform/^([aoe])(ng)?$/$1$1$2/
-    - xform/iu$/Ⓠ/
-    - xform/[iu]a$/Ⓦ/
-    - xform/[uv]an$/Ⓡ/
-    - xform/[uv]e$/Ⓣ/
-    - xform/ing$|uai$/Ⓨ/
-    - xform/^sh/Ⓤ/
-    - xform/^ch/Ⓘ/
-    - xform/^zh/Ⓥ/
-    - xform/uo$/Ⓞ/
-    - xform/[uv]n$/Ⓟ/
-    - xform/(.)i?ong$/$1Ⓢ/
-    - xform/[iu]ang$/Ⓓ/
-    - xform/(.)en$/$1Ⓕ/
-    - xform/(.)eng$/$1Ⓖ/
-    - xform/(.)ang$/$1Ⓗ/
-    - xform/ian$/Ⓜ/
-    - xform/(.)an$/$1Ⓙ/
-    - xform/iao$/Ⓒ/
-    - xform/(.)ao$/$1Ⓚ/
-    - xform/(.)ai$/$1Ⓛ/
-    - xform/(.)ei$/$1Ⓩ/
-    - xform/ie$/Ⓧ/
-    - xform/ui$/Ⓥ/
-    - xform/(.)ou$/$1Ⓑ/
-    - xform/in$/Ⓝ/
-    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
-    #- abbrev/^([a-z]).+$/$1/   #简拼
 
 自然码: 
   __append:
@@ -613,42 +567,6 @@ speller:
     - xform/^(.)(āo|ao|iè)$/$1Q/
     - xlit/QWERTYUIOPASDFGHMJCKLZXVBN/qwertyuiopasdfghmjcklzxvbn/
 
-小鹤双拼(备份): 
-  __append:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/^ng$/eng/
-    - xform/ńg|ňg|ǹg/eng/
-    - xform/ń|ň|ǹ/en/
-    - derive/^([jqxy])u$/$1v/
-    - derive/^([aoe])([ioun])$/$1$1$2/
-    - xform/^([aoe])(ng)?$/$1$1$2/
-    - xform/iu$/Ⓠ/
-    - xform/(.)ei$/$1Ⓦ/
-    - xform/uan$/Ⓡ/
-    - xform/[uv]e$/Ⓣ/
-    - xform/un$/Ⓨ/
-    - xform/^sh/Ⓤ/
-    - xform/^ch/Ⓘ/
-    - xform/^zh/Ⓥ/
-    - xform/uo$/Ⓞ/
-    - xform/ie$/Ⓟ/
-    - xform/(.)i?ong$/$1Ⓢ/
-    - xform/ing$|uai$/Ⓚ/
-    - xform/(.)ai$/$1Ⓓ/
-    - xform/(.)en$/$1Ⓕ/
-    - xform/(.)eng$/$1Ⓖ/
-    - xform/[iu]ang$/Ⓛ/
-    - xform/(.)ang$/$1Ⓗ/
-    - xform/ian$/Ⓜ/
-    - xform/(.)an$/$1Ⓙ/
-    - xform/(.)ou$/$1Ⓩ/
-    - xform/[iu]a$/Ⓧ/
-    - xform/iao$/Ⓝ/
-    - xform/(.)ao$/$1Ⓒ/
-    - xform/ui$/Ⓥ/
-    - xform/in$/Ⓑ/
-    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
-    #- abbrev/^([a-z]).+$/$1/   #简拼
 
 小鹤双拼: 
   __append:
