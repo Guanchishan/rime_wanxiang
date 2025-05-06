@@ -90,7 +90,6 @@ engine:
     - abc_segmentor
     - affix_segmentor@radical_lookup  # 部件拆字自定义 tag
     - affix_segmentor@reverse_stroke  #笔画反查
-    - affix_segmentor@add_user_dict
     - punct_segmentor
     - fallback_segmentor
   translators:
@@ -107,8 +106,6 @@ engine:
     - table_translator@chengyu           # 简码成语
     - table_translator@radical_lookup    # 部件拆字反查
     - table_translator@reverse_stroke    #笔画反查
-    - script_translator@user_dict_set
-    - script_translator@add_user_dict
     - lua_translator@*force_gc          # 暴力 GC 降低内存
   filters:
     - lua_filter@*chars_filter                      #字符集过滤
@@ -212,7 +209,7 @@ translator:
     - xform/9/3/
     - xform/0/4/
   #disable_user_dict_for_patterns:
-  #  - "^[a-z]{1,6}"    #如果你开启调频，需要一并考虑这个配置，基本的6码3字不调频
+  #  - "^[a-z]{1,6}"    #如果你开启调频，需要一并考虑这个配置是否需要，基本的6码3字不调频
 
 # 自定义短语
 custom_phrase:
@@ -991,43 +988,6 @@ speller:
     - xform/n/b/
 26键:          
   __append: []
-
-user_dict_set:
-  dictionary: wanxiang
-  initial_quality: 5
-  enable_completion: false
-  enable_sentence: false
-  spelling_hints: 100
-  comment_format: {comment}
-  preedit_format:
-    - xform/7/1/
-    - xform/8/2/
-    - xform/9/3/
-    - xform/0/4/
-  enable_user_dict: true
-  user_dict: zc
-
-  # 自定义词典加词(ac引导)
-add_user_dict:
-  tag: add_user_dict
-  dictionary: wanxiang
-  initial_quality: -1
-  user_dict: zc
-  enable_charset_filter: false # 是否开启字符集过滤
-  enable_completion: false # 提前显示尚未输入完整码的字〔仅 table_translator 有效〕
-  enable_encoder: true # 是否开启自动造词〔仅 table_translator 有效〕
-  enable_sentence: true #  是否开启自动造句
-  enable_user_dict: true 
-  encode_commit_history: false # 是否对已上屛词自动成词〔仅 table_translator 有效〕
-  preedit_format:
-    - xform/7/1/
-    - xform/8/2/
-    - xform/9/3/
-    - xform/0/4/
-  comment_format:
-  prefix: "ac"
-  tips: "〔自造词〕"
-
 
 
 #语法模型
